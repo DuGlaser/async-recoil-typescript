@@ -1,44 +1,46 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# async-recoil-typescript
+suspense + recoil による非同期通信の練習
 
-## Available Scripts
+> このリポジトリのtypescriptハージョン  
+> https://github.com/DuGlaser/async-recoil  
 
-In the project directory, you can run:
+## DEMO
+[![Image from Gyazo](https://i.gyazo.com/9481828b28b23038f088b0ae7dc2b8c0.gif)](https://gyazo.com/9481828b28b23038f088b0ae7dc2b8c0)
 
-### `yarn start`
+# Features
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* recoilを使ったstate管理
+* suspenseを使ってloading画面を表示
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Usage 
+### clone
+```bash
+$ git clone https://github.com/DuGlaser/async-recoil.git
+```
 
-### `yarn test`
+### 初期設定
+```bash
+$ cd async-recoil
+$ yarn
+$ touch .env
+```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 環境変数(.env)の設定
+OMDb APIを使用しているためAPI KEYが必要です。  
+使い方は以下を参照してください。
+> https://www.omdbapi.com/
+```
+REACT_APP_OMDB_API=https://www.omdbapi.com/?apikey=YOUR_API_KEY
+```
 
-### `yarn build`
+### アプリ起動
+```
+$ yarn start
+```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Others
+気になる点や問題点など些細なことでもいいので何かありましたら、PRやIsuueを投げていただけると幸いです。
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Licence
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+[MIT](https://github.com/DuGlaser/async-recoil/blob/master/LICENSE)
