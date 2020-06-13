@@ -1,5 +1,6 @@
 import React from 'react';
 import { css } from 'emotion';
+import { Movie } from '../api/client';
 
 const movieCardStyle = css`
   list-style: none;
@@ -18,8 +19,11 @@ const movieCardStyle = css`
   }
 `;
 
-// TODO: change the any type
-const MovieCard = (props: any) => {
+interface Props {
+  movie: Movie;
+}
+
+const MovieCard: React.FC<Props> = (props) => {
   const { Poster, Title, Year, Type } = props.movie;
   return (
     <li className={movieCardStyle}>

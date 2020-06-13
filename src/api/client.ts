@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from 'axios';
 
-interface Movie {
+export interface Movie {
   Title: string;
   Year: string;
   imdbID: string;
