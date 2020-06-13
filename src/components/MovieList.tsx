@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { css } from 'emotion';
 import { useRecoilValue } from 'recoil';
 import { searchResult } from '../states/searchState';
-// import MovieCard from './MovieCard';
+import MovieCard from './MovieCard';
 
 const movieCardList = css`
   display: grid;
@@ -18,10 +18,10 @@ const MovieList = () => {
   const data = useRecoilValue(searchResult);
   return (
     <ul className={movieCardList}>
-      {/* {data.Response === 'True' && */}
-      {/*   data.Search.map((movie) => { */}
-      {/*     return <MovieCard movie={movie} key={movie.imdbID} />; */}
-      {/*   })} */}
+      {data.Search &&
+        data.Search.map((movie) => {
+          return <MovieCard movie={movie} key={movie.imdbID} />;
+        })}
     </ul>
   );
 };
