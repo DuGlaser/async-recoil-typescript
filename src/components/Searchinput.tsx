@@ -35,7 +35,7 @@ const wrapper = css`
 `;
 
 const SearchInput = () => {
-  const [text, setText] = useState('');
+  const [text, setText] = useState<string>('');
   const setSearchWord = useSetRecoilState(searchState);
 
   const handleSubmit = () => {
