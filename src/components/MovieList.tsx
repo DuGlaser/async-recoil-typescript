@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { css } from 'emotion';
 import { useRecoilValue } from 'recoil';
 import { searchResult } from '../states/searchState';
